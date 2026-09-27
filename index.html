@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genshin X Craft | Minecraft Addon</title>
+
+  <!-- Google Font (Genshin-like vibe) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #ececec;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0d0822;
+      background: linear-gradient(180deg, #020617, var(--bg));
+      color: var(--text);
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sticky Navigation Bar */
+    .navbar-top {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: rgba(10, 10, 40, 0.99);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(136, 127, 255, 0.9);
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .nav-logo-link {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+    }
+
+    .nav-icon {
+      height: 100px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-title {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+
+    /* Hero Header */
+    header {
+      position: relative;
+      background: url("images/genshin_background.png") center/cover no-repeat;
+      min-height: 15vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px 60px;
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.1);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      color: #e2e8f0;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+      margin: 0;
+    }
+
+    /* Scroll Container (matches index.html) */
+    .main-scroll {
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .main-scroll::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .main-scroll::-webkit-scrollbar-thumb {
+      background: #38bdf8;
+      border-radius: 6px;
+    }
+
+    .main-scroll::-webkit-scrollbar-thumb:hover {
+      background: #0edbff;
+    }
+
+    .main-scroll::-webkit-scrollbar-track {
+      background: #020617;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .card h2 {
+      font-family: 'Cinzel', serif;
+      margin-top: 0;
+      border-bottom: 1px solid #1f2933;
+      padding-bottom: 10px;
+    }
+
+    /* Override for inner headings inside description (keep MCPEDL style) */
+    .card h1, .card h3 {
+      font-family: 'Cinzel', serif;
+    }
+
+    .features ul {
+      padding-left: 20px;
+    }
+
+    .features li {
+      margin-bottom: 8px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .info-box {
+      background: #020617;
+      border-radius: 12px;
+      padding: 15px;
+      border: 1px solid #1f2933;
+    }
+
+    .download {
+      text-align: center;
+    }
+
+    .download a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 26px;
+      background: var(--accent);
+      color: #020617;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .download a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(56,189,248,0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #1f2933;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .nav-icon {
+        height: 32px;
+      }
+      .nav-title {
+        height: 24px;
+      }
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navbar (only icon + title, redirects to index) -->
+  <nav class="navbar-top">
+    <a href="../index.html" class="nav-logo-link">
+      <img src="../images/strawberryicon.png" alt="Strawberry Productions" class="nav-icon" />
+      <img src="../images/title.png" alt="Strawberry Productions" class="nav-title" />
+    </a>
+  </nav>
+
+  <!-- Scrollable wrapper -->
+  <div class="main-scroll">
+
+    <!-- Hero Header -->
+    <header>
+      <div class="hero-content">
+        <h1>Genshin X Craft</h1>
+        <p>Bring the world of Genshin Impact into Minecraft Bedrock Edition</p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- ==========================================================
+           SCREENSHOTS SECTION (unchanged)
+           ========================================================== -->
+      <section class="card">
+        <h2>Screenshots</h2><br>
+        <p>Preview the addon in action:</p>
+        <div class="gallery">
+          <img src="../images/Genshin_x_Craft_thumbnail.webp" alt="Screenshot 1">
+          <img src="../images/Zhongli_thumbnail.webp" alt="Screenshot 2">
+          <img src="../images/2_Star_Weapon.webp" alt="Screenshot 3">
+        </div>
+      </section>
+
+      <!-- ==========================================================
+           🔥 UPDATED DESCRIPTION (MCPEDL style content)
+           ========================================================== -->
+      <section class="card">
+        <h2>Description:</h2>
+        <h3>
+          <br>New Mob : Paimon
+        </h3>
+
+        <p style="text-align: center;">
+          <img style="display: block; margin-left: auto; margin-right: auto;" 
+               src="https://media.forgecdn.net/attachments/description/1385396/description_4bfb6b72-fcaa-4219-9ec8-549bd3249fc1.png" 
+               alt="" width="70%" height="auto">
+               <br><br>
+          <span style="text-decoration: underline;">
+              <img src="https://media.forgecdn.net/attachments/description/1385396/description_28928681-d0cb-4b1d-b637-3bdf471ce320.png" 
+               alt="" width="70%" height="auto"><br>
+          </span>
+          <br><span style="text-decoration: underline;">Obtain through Fishing</span>
+        </p>
+
+        <p style="text-align: center;">
+          <span style="text-decoration: underline;">Behaves like allay</span>
+        </p>
+
+        <p style="text-align: center;">
+          
+        </p>
+
+        <!-- Elemental Slimes -->
+        <h3 style="text-align: left;">Monster: Elemental Slimes</h3>
+
+        <p style="text-align: center;">
+            <img style="display: block; margin-left: auto; margin-right: auto;" 
+                 src="https://media.forgecdn.net/attachments/description/1385396/description_b2da4b55-f07a-4fef-a2b1-218828222d8d.gif" 
+                 alt="" width="70%" height="auto">
+            <br><span style="text-decoration: underline;">Hp range = 50 to 100</span>
+        </p>
+
+        <p style="text-align: center;">
+          <span style="text-decoration: underline;">diamond and above equipment recommended to defeat them</span>
+        </p>
+
+        <p style="text-align: center;">
+          <span style="text-decoration: underline;">has chance to drop Paistone that can be used to upgrade weapons</span>
+        </p>
+
+        <h3 style="text-align: center;">
+          <strong><span style="text-decoration: underline;">
+            <img src="https://media.forgecdn.net/attachments/description/1385396/description_96a6c63c-fa21-4e6c-90fa-38944b2e5c90.png" 
+                 alt="" width="10%" height="10%">
+            <br><span style="color: #843fa1; text-decoration: underline;">Paistone</span>
+          </span></strong>
+        </h3>
+
+        <!-- Hilichurl -->
+        <h3 style="text-align: left;">Monster: Hilichurl</h3>
+
+        <p style="text-align: center;">
+            <img src="https://media.forgecdn.net/attachments/description/1385396/description_0230b0ca-3a6b-48ef-8aca-761a42d48e55.png" 
+                 alt="" width="30%" height="auto">
+        </p>
+
+        <p style="text-align: center;">
+          <span style="text-decoration: underline;">Hp range = 75 to 100</span>
+        </p>
+
+        <p style="text-align: center;">
+          <span style="text-decoration: underline;">iron and above equipment recommended to defeat them</span>
+        </p>
+
+        <p style="text-align: center;">
+          <span style="text-decoration: underline;">drop is useless , its better to avoid fight</span>
+        </p><br><br>
+
+        <!-- YouTube Video -->
+        <h3 style="text-align: left;">Watch YouTube video for better idea</h3><br>
+
+        <div style="text-align: center;">
+    <a href="https://www.youtube.com/watch?v=_68gNxo0efo" target="_blank">
+        <img 
+            src="https://img.youtube.com/vi/_68gNxo0efo/maxresdefault.png"
+            alt="Watch video on YouTube"
+            width="75%"
+        >
+    </a>
+</div><br>
+
+        <!-- Discord -->
+        <h2 style="text-align: center;">Click on image to join</h2><br>
+
+        <p style="text-align: center;">
+          <a href="https://discord.gg/cywgrpgDGQ" target="_blank" rel="nofollow noopener">
+            <img src="https://media.forgecdn.net/attachments/description/1385396/description_b614caa7-16e1-4f2f-96b9-e41f233518de.png" 
+                 alt="" width="80%" height="auto">
+          </a>
+        </p>
+
+        <p style="text-align: center;">&nbsp;</p>
+
+        <!-- Bonus Fact -->
+        <h1 style="text-align: center;">Bonus Fact</h1>
+
+        <p>
+          after every version i will ask which character bundle you want in next update 
+          so hurry and vote for your character so join Discord to help it grow.&nbsp;
+        </p>
+
+        <p style="text-align: center;">
+          <img style="display: block; margin-left: auto; margin-right: auto;" 
+               src="https://media.forgecdn.net/attachments/description/1385396/description_3fc9fbeb-6e78-454e-9c49-4e436a219ffc.png" 
+               alt="" width="75%" height="auto">
+            {kit will include Outfit [Armor], Weapon and 1 elemental Skill to support your gameplay}
+        </p>
+      </section>
+      <!-- ==========================================================
+           END DESCRIPTION
+           ========================================================== -->
+
+      <!-- Features -->
+      <section class="card features">
+        <h2>Features</h2><br>
+        <ul>
+          <li>Custom Genshin-inspired weapons</li>
+          <li>Dedicated Character Sets</li>
+          <li>New mobs and traders</li>
+          <li>Survival-friendly balance</li>
+          <li>Higher Survival Difficulty</li>
+        </ul>
+      </section>
+
+      <!-- Addon Info -->
+      <section class="card">
+        <h2>Addon Info</h2><br>
+        <div class="info-grid">
+          <div class="info-box"><strong>Game Version:</strong><br> Minecraft Bedrock</div>
+          <div class="info-box"><strong>Category:</strong><br> Bedrock Addon</div>
+          <div class="info-box"><strong>Creator:</strong><br> Strawberry Productions</div>
+          <div class="info-box"><strong>Status:</strong><br> Ongoing</div>
+        </div>
+      </section>
+
+      <!-- Download -->
+      <section class="card download">
+        <h2>Download</h2><br>
+        <p>Get the latest version of the addon below:</p>
+        <a href="download_link.html">Download Addon</a>
+        <br><br>
+        <a href="../index.html">⬅ Back to Home</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>Not affiliated with Mojang or HoYoverse. Fan-made project.</p>
+    </footer>
+
+  </div>
+  <!-- End main-scroll -->
+
+</body>
+</html>
