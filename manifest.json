@@ -1,0 +1,30 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Genshin X Craft V-2 RP",
+		"description": "Zhongli Update",
+		"uuid": "78dc5e29-5159-45df-8c81-9748ad178b08",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 16, 0]
+	},
+	"metadata": {
+		"authors": ["master"],
+		"generated_with": {
+			"blockbench_entity_wizard": ["1.8.2"]
+		}
+	},
+	"modules": [
+		{
+			"description": "Zhongli Update",
+			"type": "resources",
+			"uuid": "7598765f-5304-9dca-98b2-143e63395ad0",
+			"version": [1, 0, 0]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "e036869d-5779-4029-87b2-c623636b2454",
+			"version": [1, 0, 0]
+		}
+	]
+}
