@@ -1,0 +1,45 @@
+item.gi:traveller_sword=Traveller Sword\n
+item.gi:vortex_vanquisher.name=§l§pVortex_Vanquisher§r\n§e§oZhongli's Weapon§r\n
+entity.gi:paimon.name=Paimon
+item.spawn_egg.entity.gi:paimon.name=Spawn paimon
+item.gi:dull_blade=Dull Blade\n
+item.gi:waster_greatsword=Waster Greatsword\n
+item.gi:beginners_protector.name=Beginner's Protector\n
+entity.gi:paimon.name=paimon
+item.spawn_egg.entity.gi:paimon.name= Spawn paimon 
+entity.gi:anemo_slime.name=Anemo Slime
+item.spawn_egg.entity.gi:anemo_slime.name=Spawn Anemo Slime
+
+entity.gi:hydro_slime.name=Hydro Slime
+item.spawn_egg.entity.gi:hydro_slime.name=Spawn Hydro Slime
+
+entity.gi:cryo_slime.name=Cryo Slime
+item.spawn_egg.entity.gi:cryo_slime.name=Spawn Cryo Slime
+
+entity.gi:dendro_slime.name=Dendro Slime
+item.spawn_egg.entity.gi:dendro_slime.name=Spawn Dendro Slime
+
+entity.gi:electro_1_slime.name=Electro 1 Slime
+item.spawn_egg.entity.gi:electro_1_slime.name=Spawn Electro 1 Slime
+
+entity.gi:electro_2_slime.name=Electro 2 Slime
+item.spawn_egg.entity.gi:electro_2_slime.name=Spawn Electro 2 Slime
+
+entity.gi:geo_slime.name=Geo Slime
+item.spawn_egg.entity.gi:geo_slime.name=Spawn Geo Slime
+
+entity.gi:pyro_slime.name=Pyro Slime
+item.spawn_egg.entity.gi:pyro_slime.name=Spawn Pyro Slime
+
+item.gi:paistone=Paistone
+item.gi:apprentices_notes=Apprentice's Note's\n
+item.gi:hunter_bow=Hunter's Bow\n
+entity.gi:hilichurl.name=Hilichurl
+item.spawn_egg.entity.gi:hilichurl.name=Spawn Hilichurl
+item.gi:arrow_1=Arrow [1]\n
+
+item.gi:old_mercs_pal=Old Mercs Pal\n
+item.gi:iron_point=Iron Point\n
+item.gi:pocket_grimoire=Pocket Grimoire\n
+item.gi:seasoned_hunters_bow=Seasoned_Hunters_Bow\n
+item.gi:silver_sword=Silver Sword\n

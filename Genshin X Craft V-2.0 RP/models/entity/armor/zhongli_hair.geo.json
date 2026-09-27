@@ -1,0 +1,55 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.zhongli_hair",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Waist",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "Head",
+					"parent": "Waist",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.5, "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Body",
+					"parent": "Waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "cape",
+					"parent": "Body",
+					"pivot": [0, 25, 2],
+					"cubes": [
+						{
+							"origin": [-1.5, 10.24991, 2.249],
+							"size": [2.5, 15, 0],
+							"pivot": [-0.25, 24.24991, 2.249],
+							"rotation": [5, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 48], "uv_size": [4, 14]},
+								"east": {"uv": [0, 48], "uv_size": [0, 14]},
+								"south": {"uv": [5, 48], "uv_size": [2, 14]},
+								"west": {"uv": [4, 48], "uv_size": [0, 14]},
+								"up": {"uv": [0, 48], "uv_size": [4, 0]},
+								"down": {"uv": [4, 48], "uv_size": [4, 0]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

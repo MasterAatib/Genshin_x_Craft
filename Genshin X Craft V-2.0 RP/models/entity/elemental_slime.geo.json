@@ -1,0 +1,56 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.elemental_slime",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 2,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "cube",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-6, 0.5, -6], "size": [12, 7, 12], "uv": [0, 0]},
+						{"origin": [-5, 0, -5], "size": [10, 9, 10], "uv": [0, 0]},
+						{"origin": [-7, 1, -7], "size": [14, 5, 14], "uv": [0, 0]},
+						{
+							"origin": [-7, 3.5, -8.75],
+							"size": [14, 7, 2],
+							"inflate": -0.95,
+							"pivot": [0, 4.5, -7.75],
+							"rotation": [-25, 0, 0],
+							"uv": {
+								"north": {"uv": [22, 43], "uv_size": [42, 21]},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [0, 0], "uv_size": [0, 0]},
+								"west": {"uv": [0, 0], "uv_size": [1, 0]},
+								"up": {"uv": [0, 0], "uv_size": [-2, -2]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "eye0",
+					"parent": "cube",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "eye1",
+					"parent": "cube",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "mouth",
+					"parent": "cube",
+					"pivot": [0, 24, 0]
+				}
+			]
+		}
+	]
+}

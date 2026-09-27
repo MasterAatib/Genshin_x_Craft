@@ -1,0 +1,19 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"entity.gi:paimon.ambient": {
+			"sounds": [
+				"sounds/entity/paimon_sound/paimon_ambient_1",
+				"sounds/entity/paimon_sound/paimon_ambient_2",
+				"sounds/entity/paimon_sound/paimon_ambient_3",
+				"sounds/entity/paimon_sound/paimon_ambient_4",
+				"sounds/entity/paimon_sound/paimon_ambient_5"
+			]
+		},
+		"entity.gi:paimon.hurt": {
+			"sounds": [
+				"sounds/mob/allay/hurt1"
+			]
+		}
+	}
+}

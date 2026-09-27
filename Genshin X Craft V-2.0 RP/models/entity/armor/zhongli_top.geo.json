@@ -1,0 +1,91 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.zhongli_top",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Waist",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "Body",
+					"parent": "Waist",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "inflate": 0.275, "uv": [0, 16]},
+						{"origin": [0.4, 4, -2], "size": [3.75, 10, 4], "inflate": 0.3, "pivot": [0.4, 14, 0], "rotation": [0, 0, -10], "uv": [32, 32]},
+						{"origin": [-4.15, 4, -2], "size": [3.75, 10, 4], "inflate": 0.3, "pivot": [-0.4, 14, 0], "rotation": [0, 0, 10], "uv": [40, 16]},
+						{
+							"origin": [-4.51362, 13.0157, 2.56006],
+							"size": [9, 5, 0],
+							"inflate": 0.01,
+							"pivot": [-0.01362, 16.0157, 2.56006],
+							"rotation": [7.5, 0, 0],
+							"uv": {
+								"north": {"uv": [11, 54], "uv_size": [20, 10]},
+								"east": {"uv": [11, 59], "uv_size": [0, 0]},
+								"south": {"uv": [11, 54], "uv_size": [20, 10]},
+								"west": {"uv": [21, 59], "uv_size": [0, 0]},
+								"up": {"uv": [21, 59], "uv_size": [0, 0]},
+								"down": {"uv": [31, 59], "uv_size": [0, 0]}
+							}
+						},
+						{
+							"origin": [-1, 12.9, 2.4],
+							"size": [2, 2, 1],
+							"inflate": -0.4,
+							"pivot": [0, 13.9, 2.9],
+							"rotation": [7.5, -7.5, 45],
+							"uv": {
+								"north": {"uv": [53, 62], "uv_size": [2, 2]},
+								"east": {"uv": [52, 62], "uv_size": [1, 2]},
+								"south": {"uv": [56, 56], "uv_size": [8, 8]},
+								"west": {"uv": [55, 62], "uv_size": [1, 2]},
+								"up": {"uv": [52, 61], "uv_size": [2, 1]},
+								"down": {"uv": [54, 62], "uv_size": [2, -1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "Waist",
+					"pivot": [-5, 22, 0],
+					"cubes": [
+						{"origin": [-8, 12, -2], "size": [4, 12, 4], "inflate": 0.25, "uv": [24, 16]},
+						{
+							"origin": [-8, 12, -2],
+							"size": [4, 4, 4],
+							"inflate": 0.4,
+							"uv": {
+								"north": {"uv": [54, 34], "uv_size": [-4, 4]},
+								"east": {"uv": [54, 34], "uv_size": [4, 4]},
+								"south": {"uv": [62, 34], "uv_size": [-4, 4]},
+								"west": {"uv": [46, 34], "uv_size": [4, 4]},
+								"up": {"uv": [50, 30], "uv_size": [4, 4]},
+								"down": {"uv": [54, 34], "uv_size": [4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "Waist",
+					"pivot": [5, 22, 0],
+					"cubes": [
+						{"origin": [4, 12, -2], "size": [4, 12, 4], "inflate": 0.25, "uv": [0, 32]},
+						{"origin": [4, 12, -2], "size": [4, 4, 4], "inflate": 0.4, "uv": [46, 30]}
+					]
+				}
+			]
+		}
+	]
+}

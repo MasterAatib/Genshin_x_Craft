@@ -1,0 +1,70 @@
+{
+	"texture_data": {
+		"hilichurl_spawn_egg": {
+			"textures": ["textures/items/hilichurl_spawn_egg"]
+		},
+		"paistone": {
+			"textures": "textures/items/paistone.png"
+		},
+		"elemental_slime_spawn_egg": {
+			"textures": ["textures/items/elemental_slime_spawn_egg"]
+		},
+		"paimon_spawn_egg": {
+			"textures": ["textures/items/paimon_spawn_egg"]
+		},
+		"beginners_protector": {
+			"textures": "textures/items/beginners_protector.png"
+		},
+		"waster_greatsword": {
+			"textures": "textures/items/waster_greatsword.png"
+		},
+		"dull_blade": {
+			"textures": "textures/items/dull_blade.png"
+		},
+		"traveller_sword": {
+			"textures": "textures/items/traveller_sword.png"
+		},
+		"vortex_vanquisher": {
+			"textures": "textures/items/vortex_vanquisher.png"
+		},
+		"hunter_bow": {
+			"textures": "textures/items/hunter_bow.png"
+		},
+		"apprentices_notes": {
+			"textures": "textures/items/apprentices_notes.png"
+		},
+		"iron_point": {
+			"textures": "textures/items/iron_point.png"
+		},
+		"old_mercs_pal": {
+			"textures": "textures/items/old_mercs_pal.png"
+		},
+		"silver_sword": {
+			"textures": "textures/items/silver_sword.png"
+		},
+		"seasoned_hunters_bow": {
+			"textures": "textures/items/seasoned_hunter_bow.png"
+		},
+		"pocket_grimoire": {
+			"textures": "textures/items/pocket_grimoire.png"
+		},
+		"zhongli_skill": {
+			"textures": "textures/items/zhongli_skill.png"
+		},
+		"zhongli_hair": {
+			"textures": "textures/items/zhongli_hair"
+		},
+		"zhongli_top": {
+			"textures": "textures/items/zhongli_top"
+		},
+		"zhongli_bottom": {
+			"textures": "textures/items/zhongli_bottom"
+		},
+		"zhongli_shoes": {
+			"textures": "textures/items/zhongli_shoes"
+		},
+		"zhongli_weapon": {
+			"textures": "textures/items/zhongli_weapon"
+		}
+	}
+}

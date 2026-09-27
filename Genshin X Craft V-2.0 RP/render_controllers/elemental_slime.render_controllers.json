@@ -1,0 +1,24 @@
+{
+    "format_version":"1.8.0",
+    "render_controllers":{
+        "controller.render.elemental_slime":{
+            "geometry": "Geometry.default",
+            "materials": [ { "*": "Material.default" } ],
+            "arrays":{
+                "textures":{
+                    "Array.va":[
+                        "Texture.anemo",
+                        "Texture.hydro",
+                        "Texture.cryo",
+                        "Texture.dendro",
+                        "Texture.electro_1",
+                        "Texture.electro_2",
+                        "Texture.geo",
+                        "Texture.pyro"
+                    ]
+                }
+            },
+            "textures":["Array.va[q.variant]"]
+        }
+    }
+}

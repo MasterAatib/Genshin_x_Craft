@@ -1,0 +1,82 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.apprentices_notes",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "root",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)"
+				},
+				{
+					"name": "book",
+					"parent": "root",
+					"pivot": [0, 9, -14],
+					"rotation": [-30, 0, 0],
+					"cubes": [
+						{"origin": [-1, 9, -20], "size": [2, 1, 12], "inflate": 0.025, "uv": [0, 38]}
+					]
+				},
+				{
+					"name": "right",
+					"parent": "book",
+					"pivot": [0, 10, -14],
+					"rotation": [0, 0, -60],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-1.5, 9.75, -20], "size": [1, 7, 12], "uv": [0, 0], "mirror": false},
+						{
+							"origin": [-0.75, 9.75, -20],
+							"size": [1, 7, 12],
+							"inflate": -0.25,
+							"uv": {
+								"north": {"uv": [12, 31], "uv_size": [1, 7]},
+								"east": {"uv": [40, 50], "uv_size": [24, 14]},
+								"south": {"uv": [25, 31], "uv_size": [1, 7]},
+								"west": {"uv": [40, 50], "uv_size": [24, 14]},
+								"up": {"uv": [12, 19], "uv_size": [1, 12]},
+								"down": {"uv": [13, 31], "uv_size": [1, -12]}
+							}
+						}
+					]
+				},
+				{
+					"name": "left",
+					"parent": "book",
+					"pivot": [0, 10, -14],
+					"rotation": [0, 0, 60],
+					"mirror": true,
+					"cubes": [
+						{"origin": [0.5, 9.75, -20], "size": [1, 7, 12], "uv": [26, 0], "mirror": false},
+						{
+							"origin": [-0.25, 9.75, -20],
+							"size": [1, 7, 12],
+							"inflate": -0.25,
+							"uv": {
+								"north": {"uv": [38, 31], "uv_size": [1, 7]},
+								"east": {"uv": [40, 50], "uv_size": [24, 14]},
+								"south": {"uv": [51, 31], "uv_size": [1, 7]},
+								"west": {"uv": [40, 50], "uv_size": [24, 14]},
+								"up": {"uv": [38, 19], "uv_size": [1, 12]},
+								"down": {"uv": [39, 31], "uv_size": [1, -12]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
