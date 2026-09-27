@@ -1,0 +1,52 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"gi:elemental_slime": {
+				"events": {
+					"ambient": "",
+					"attack": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.slime.attack"
+					},
+					"death": "mob.slime.small",
+					"hurt": "mob.slime.small",
+					"squish.big": {
+						"pitch": [
+							0.64,
+							0.96
+						],
+						"sound": "mob.slime.big"
+					},
+					"squish.small": {
+						"pitch": [
+							0.64,
+							0.96
+						],
+						"sound": "mob.slime.small"
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"gi:paimon": {
+				"events": {
+					"ambient": "entity.gi:paimon.ambient",
+					"ambient.tame": "mob.allay.idle_holding",
+					"death": "mob.allay.death",
+					"hurt": "entity.gi:paimon.hurt"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			}
+		}
+	}
+}
