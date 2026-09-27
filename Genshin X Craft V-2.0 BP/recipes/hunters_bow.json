@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "gi:hunter_bow_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"PPP",
+			"PXP",
+			"PPP"
+		],
+		"key": {
+			"P": {
+				"item": "gi:paistone"
+			},
+			"X": {
+				"item": "minecraft:bow"
+			}
+		},
+		"result": {
+			"item": "gi:hunter_bow",
+			"count": 1
+		}
+	}
+}

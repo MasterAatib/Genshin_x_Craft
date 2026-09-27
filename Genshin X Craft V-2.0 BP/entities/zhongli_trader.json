@@ -1,0 +1,69 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "gi:zhongli_trader",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["gi_npc", "mob", "villager"]
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.8
+      },
+      "minecraft:movement": {
+        "value": 0.0
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:nameable": {
+        "allow_name_tag_renaming": true,
+        "always_show": true
+      },
+      "minecraft:persistent": {},
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["gi:trader_setup"]
+        }
+      }
+    },
+    "component_groups": {
+      "gi:trader_setup": {
+        "minecraft:behavior.trade_with_player": {
+          "priority": 1
+        },
+        "minecraft:economy_trade_table": {
+          "display_name": "Zhongli",
+          "table": "trading/economy_trades/zhongli_trades.json",
+          "new_screen": true,
+          "show_trade_screen": true,
+          "persist_trades": true
+        }
+      }
+    }
+  }
+}

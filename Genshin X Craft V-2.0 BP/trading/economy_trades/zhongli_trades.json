@@ -1,0 +1,51 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": 0,
+      "trades": [
+        {
+          "wants": [{ "item": "minecraft:emerald", "quantity": 64 }],
+          "gives": [{ "item": "gi:vortex_vanquisher", "quantity": 1 }],
+          "max_uses": 999,
+          "trader_exp": 0,
+          "reward_exp": false
+        },
+        {
+          "wants": [{ "item": "minecraft:emerald", "quantity": 64 }],
+          "gives": [{ "item": "gi:zhongli_skill", "quantity": 1 }],
+          "max_uses": 999,
+          "trader_exp": 0,
+          "reward_exp": false
+        },
+        {
+          "wants": [{ "item": "minecraft:emerald", "quantity": 64 }],
+          "gives": [{ "item": "gi:zhongli_hair", "quantity": 1 }],
+          "max_uses": 999,
+          "trader_exp": 0,
+          "reward_exp": false
+        },
+        {
+          "wants": [{ "item": "minecraft:emerald", "quantity": 64 }],
+          "gives": [{ "item": "gi:zhongli_top", "quantity": 1 }],
+          "max_uses": 999,
+          "trader_exp": 0,
+          "reward_exp": false
+        },
+        {
+          "wants": [{ "item": "minecraft:emerald", "quantity": 64 }],
+          "gives": [{ "item": "gi:zhongli_bottom", "quantity": 1 }],
+          "max_uses": 999,
+          "trader_exp": 0,
+          "reward_exp": false
+        },
+        {
+          "wants": [{ "item": "minecraft:emerald", "quantity": 64 }],
+          "gives": [{ "item": "gi:zhongli_shoes", "quantity": 1 }],
+          "max_uses": 999,
+          "trader_exp": 0,
+          "reward_exp": false
+        }
+      ]
+    }
+  ]
+}

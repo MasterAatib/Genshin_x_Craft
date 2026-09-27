@@ -1,0 +1,114 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "gi:arrow_entity_1",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+
+    "component_groups": {
+      "hard_arrow": {
+        "minecraft:projectile": {
+          "on_hit": {
+            "impact_damage": {
+              "damage": 12,
+              "knockback": true,
+              "destroy_on_hit": true
+            },
+            "stick_in_ground": { "shake_time": 0.35 }
+          },
+          "power": 4,
+          "gravity": 0.02,
+          "uncertainty_base": 0,
+          "uncertainty_multiplier": 0,
+          "anchor": "eyes"
+        }
+      },
+
+      "player_arrow": {
+        "minecraft:projectile": {
+          "on_hit": {
+            "impact_damage": {
+              "damage": 10,
+              "knockback": true,
+              "destroy_on_hit": true,
+              "min_critical_damage": 12,
+              "max_critical_damage": 16,
+              "power_multiplier": 0.97
+            },
+            "stick_in_ground": { "shake_time": 0.35 }
+          },
+            "hit_sound": "bow.hit",
+                "power": 4.0,
+                "gravity": 0.02,
+                "uncertainty_base": 1,
+                "uncertainty_multiplier": 0,
+                "anchor": "eyes",
+                "should_bounce": true,
+                "offset": [
+                    0,
+                    -0.1,
+                    0
+                ]
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {
+          "max_distance": 120
+        }
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 10,
+            "knockback": true,
+            "destroy_on_hit": true
+          },
+          "stick_in_ground": { "shake_time": 0.35 }
+        },
+        "hit_sound": "bow.hit",
+                "power": 4.0,
+                "gravity": 0.02,
+                "uncertainty_base": 1,
+                "uncertainty_multiplier": 0,
+                "anchor": "eyes",
+                "should_bounce": true,
+                "offset": [
+                    0,
+                    -0.1,
+                    0
+                ]
+            },
+
+      "minecraft:physics": {},
+      "minecraft:dimension_bound": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "filters": { "test": "is_difficulty", "value": "hard" },
+            "add": { "component_groups": [ "hard_arrow" ] }
+          },
+          {
+            "filters": { "test": "is_family", "subject": "owner", "value": "player" },
+            "add": { "component_groups": [ "player_arrow" ] }
+          }
+        ]
+      }
+    }
+  }
+}

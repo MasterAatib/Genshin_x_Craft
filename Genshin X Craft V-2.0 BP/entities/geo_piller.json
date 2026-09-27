@@ -1,0 +1,66 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:entity": {
+
+    "description": {
+      "identifier": "gi:geo_piller",
+      "is_spawnable": true,
+      "is_summonable": true
+    },
+
+    "components": {
+
+      "minecraft:type_family": {
+        "family": ["player"]
+      },
+
+      "minecraft:movement": {
+        "value": 0
+      },
+
+      "minecraft:physics": {},
+
+      "minecraft:knockback_resistance": {
+        "value": 100
+      },
+
+      "minecraft:collision_box": {
+        "width": 1,
+        "height": 2
+      },
+
+      "minecraft:health": {
+        "value": 50,
+        "max": 70
+      }
+    },
+
+    "component_groups": {
+
+      "attack_mode": {
+
+        "minecraft:damage_nearby_mobs": {
+          "damage": 6,
+          "radius": 5,
+          "target": "enemy"
+        },
+
+        "minecraft:emit_particle": {
+          "particle": "gi:geo_area",
+          "interval": 1.0
+        }
+      }
+    },
+
+    "events": {
+
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "attack_mode"
+          ]
+        }
+      }
+    }
+  }
+}

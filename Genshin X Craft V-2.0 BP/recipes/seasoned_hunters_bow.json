@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "gi:seasoned_hunters_bow_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"QQQ",
+			"QBQ",
+			"QQQ"
+		],
+		"key": {
+			"Q": {
+				"item": "gi:paistone"
+			},
+			"B": {
+				"item": "gi:hunter_bow"
+			}
+		},
+		"result": {
+			"item": "gi:seasoned_hunters_bow",
+			"count": 1
+		}
+	}
+}

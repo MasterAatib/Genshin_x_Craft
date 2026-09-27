@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "gi:beginners_protector_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"PPP",
+			"PHP",
+			"PPP"
+		],
+		"key": {
+			"P": {
+				"item": "gi:paistone"
+			},
+			"H": {
+				"item": "minecraft:wooden_spear"
+			}
+		},
+		"result": {
+			"item": "gi:beginners_protector",
+			"count": 1
+		}
+	}
+}

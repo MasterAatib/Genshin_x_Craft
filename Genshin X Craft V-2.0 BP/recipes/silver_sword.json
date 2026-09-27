@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "gi:silver_sword_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"QQQ",
+			"QSQ",
+			"QQQ"
+		],
+		"key": {
+			"Q": {
+				"item": "gi:paistone"
+			},
+			"S": {
+				"item": "minecraft:stone_sword"
+			}
+		},
+		"result": {
+			"item": "gi:silver_sword",
+			"count": 1
+		}
+	}
+}

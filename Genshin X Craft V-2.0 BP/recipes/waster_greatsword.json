@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "gi:waster_greatsword_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"PPP",
+			"PXP",
+			"PPP"
+		],
+		"key": {
+			"P": {
+				"item": "gi:paistone"
+			},
+			"X": {
+				"item": "minecraft:wooden_pickaxe"
+			}
+		},
+		"result": {
+			"item": "gi:waster_greatsword",
+			"count": 1
+		}
+	}
+}

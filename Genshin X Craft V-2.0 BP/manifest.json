@@ -1,0 +1,41 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Genshin X Craft V-2 BP",
+		"description": "Zhongli Update",
+		"uuid": "e036869d-5779-4029-87b2-c623636b2454",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 20, 0]
+	},
+	"metadata": {
+		"authors": ["master"],
+		"generated_with": {
+			"blockbench_entity_wizard": ["1.8.2"]
+		}
+	},
+	"modules": [
+		{
+			"description": "Behavior",
+			"version": [1, 0, 0],
+			"uuid": "e4f04b8d-e481-06c5-8796-c9bd51b0e975",
+			"type": "data"
+		},
+		{
+      		"type": "script",
+      		"language": "javascript",
+      		"uuid": "001ba938-9aba-4ba3-adfd-ce87e034d298",
+      		"version": [1, 0, 0],
+      		"entry": "scripts/main.js"
+   		 }
+	],
+	"dependencies": [
+		{
+			"uuid": "78dc5e29-5159-45df-8c81-9748ad178b08",
+			"version": [1, 0, 0]
+		},
+		{
+      		"module_name": "@minecraft/server",
+      		"version": "1.17.0"
+    	}
+	]
+}

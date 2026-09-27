@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "gi:iron_point_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"QQQ",
+			"QPQ",
+			"QQQ"
+		],
+		"key": {
+			"Q": {
+				"item": "gi:paistone"
+			},
+			"P": {
+				"item": "minecraft:stone_spear"
+			}
+		},
+		"result": {
+			"item": "gi:iron_point",
+			"count": 1
+		}
+	}
+}

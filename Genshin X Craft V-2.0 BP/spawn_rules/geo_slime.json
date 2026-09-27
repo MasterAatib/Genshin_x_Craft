@@ -1,0 +1,30 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:spawn_rules": {
+      "description": {
+        "identifier": "gi:geo_slime",
+        "population_control": "animal"
+      },
+      "conditions": [
+        {
+          "minecraft:spawns_on_surface": {},
+          "minecraft:spawns_underground": {},
+          "minecraft:difficulty_filter": {
+            "min": "easy",
+            "max": "hard"
+          },
+          "minecraft:weight": {
+            "default": 80
+          },
+          "minecraft:biome_filter": {
+            "any_of": [
+              {"test": "has_biome_tag", "operator": "==", "value": "jungle"},
+              {"test": "has_biome_tag", "operator": "==", "value": "swamp"},
+              {"test": "has_biome_tag", "operator": "==", "value": "mangrove_swamp"},
+              {"test": "has_biome_tag", "operator": "==", "value": "plains"}
+            ]
+          }
+        }
+      ]
+    }
+  }

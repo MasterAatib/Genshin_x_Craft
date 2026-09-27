@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "gi:old_mercs_pal_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"QQQ",
+			"QXQ",
+			"QQQ"
+		],
+		"key": {
+			"Q": {
+				"item": "gi:paistone"
+			},
+			"X": {
+				"item": "minecraft:stone_pickaxe"
+			}
+		},
+		"result": {
+			"item": "gi:old_mercs_pal",
+			"count": 1
+		}
+	}
+}

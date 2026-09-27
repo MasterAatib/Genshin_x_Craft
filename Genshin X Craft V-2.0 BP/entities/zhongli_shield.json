@@ -1,0 +1,38 @@
+{
+  "format_version": "1.19.50",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "zhongli:shield",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:health": {
+        "value": 500,
+        "max": 500
+      },
+      "minecraft:collision_box": {
+        "width": 1.9,
+        "height": 2.2
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": true
+          }
+        ]
+      },
+      "minecraft:pushable": false,
+      "minecraft:physics": false,
+      "minecraft:type_family": {
+        "family": ["shield"]
+      },
+      "minecraft:is_hidden_when_invisible": false,
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      }
+    }
+  }
+}

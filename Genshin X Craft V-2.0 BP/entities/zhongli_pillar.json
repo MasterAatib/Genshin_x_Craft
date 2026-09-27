@@ -1,0 +1,41 @@
+{
+  "format_version": "1.19.50",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "zhongli:pillar",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:health": {
+        "value": 10,
+        "max": 10
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 6
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": true
+          }
+        ]
+      },
+      "minecraft:pushable": false,
+      "minecraft:physics": {
+        "has_gravity":true,
+        "has_collision":true
+      },
+      "minecraft:type_family": {
+        "family": ["pillar", "inanimate","player"]
+      },
+      "minecraft:is_hidden_when_invisible": false,
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      }
+    }
+  }
+}

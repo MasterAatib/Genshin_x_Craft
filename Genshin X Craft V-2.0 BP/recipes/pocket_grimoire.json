@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "gi:pocket_grimoire_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"QQQ",
+			"QCQ",
+			"QQQ"
+		],
+		"key": {
+			"Q": {
+				"item": "gi:paistone"
+			},
+			"C": {
+				"item": "gi:apprentices_notes"
+			}
+		},
+		"result": {
+			"item": "gi:pocket_grimoire",
+			"count": 1
+		}
+	}
+}

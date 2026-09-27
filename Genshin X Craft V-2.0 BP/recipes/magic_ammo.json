@@ -1,0 +1,20 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "gi:magic_ammo_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:wheat_seeds"
+			}
+		],
+		"result": {
+			"item": "gi:magic_ammo",
+			"count": 16
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "gi:apprentices_notes_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"PPP",
+			"PCP",
+			"PPP"
+		],
+		"key": {
+			"P": {
+				"item": "gi:paistone"
+			},
+			"C": {
+				"item": "minecraft:book"
+			}
+		},
+		"result": {
+			"item": "gi:apprentices_notes",
+			"count": 1
+		}
+	}
+}

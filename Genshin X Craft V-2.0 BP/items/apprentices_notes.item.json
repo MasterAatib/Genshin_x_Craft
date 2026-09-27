@@ -1,0 +1,38 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "gi:apprentices_notes",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.items"
+			}
+		},
+		"components": {
+			"minecraft:icon": "apprentices_notes",
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:use_animation": "bow",
+			"minecraft:use_modifiers": {
+				"use_duration": 7200
+			},
+			"minecraft:shooter": {
+				"ammunition": [
+					{
+						"item": "gi:magic_ammo",
+						"use_offhand": true,
+						"search_inventory": true,
+						"use_in_creative": true
+					}
+				],
+				"max_draw_duration": 1,
+				"charge_on_draw": true,
+				"scale_power_by_draw_duration": true
+			},
+			"minecraft:cooldown": {
+				"category": "attack",
+				"duration": 1
+			}
+		}
+	}
+}

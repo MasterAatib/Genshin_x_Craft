@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "gi:dull_blade_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"PPP",
+			"PWP",
+			"PPP"
+		],
+		"key": {
+			"P": {
+				"item": "gi:paistone"
+			},
+			"W": {
+				"item": "minecraft:wooden_sword"
+			}
+		},
+		"result": {
+			"item": "gi:dull_blade",
+			"count": 1
+		}
+	}
+}
