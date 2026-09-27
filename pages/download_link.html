@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genshin X Craft | Download</title>
+
+  <!-- Google Font (Genshin-like vibe) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #ececec;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0d0822;
+      background: linear-gradient(180deg, #020617, var(--bg));
+      color: var(--text);
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sticky Navigation Bar */
+    .navbar-top {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: rgba(10, 10, 40, 0.99);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(136, 127, 255, 0.9);
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .nav-logo-link {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-icon {
+      height: 100px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-title {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+
+    /* Scroll Container */
+    .main-scroll {
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .main-scroll::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .main-scroll::-webkit-scrollbar-thumb {
+      background: #38bdf8;
+      border-radius: 6px;
+    }
+
+    .main-scroll::-webkit-scrollbar-thumb:hover {
+      background: #0edbff;
+    }
+
+    .main-scroll::-webkit-scrollbar-track {
+      background: #020617;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .card h2 {
+      font-family: 'Cinzel', serif;
+      margin-top: 0;
+      border-bottom: 1px solid #1f2933;
+      padding-bottom: 10px;
+    }
+
+    /* ---------- SCREENSHOT CAROUSEL ---------- */
+    .screenshot-wrapper {
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .screenshot-track {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory; /* Forces snapping to images */
+      padding: 10px 0 20px;
+      -webkit-overflow-scrolling: touch;
+      /* Gap is removed so adjacent images don't peek through */
+    }
+
+    .screenshot-track::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .screenshot-track::-webkit-scrollbar-thumb {
+      background: #38bdf8;
+      border-radius: 4px;
+    }
+
+    .screenshot-track::-webkit-scrollbar-track {
+      background: #020617;
+      border-radius: 4px;
+    }
+
+    .screenshot-track img {
+      flex: 0 0 100%; /* Each image takes exactly 100% of the track width */
+      width: 100%;
+      aspect-ratio: 16 / 9; /* Enforces standard 16:9 aspect ratio */
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid #1f2933;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      background: #1e293b;
+      scroll-snap-align: start; /* Snaps to the left edge of the image */
+    }
+
+    .screenshot-track img:hover {
+      transform: scale(1.005);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    /* Carousel Arrows */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.6);
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      user-select: none;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(56,189,248,0.6);
+      border-color: #38bdf8;
+    }
+
+    .carousel-btn.left  { left: -10px; }
+    .carousel-btn.right { right: -10px; }
+
+    /* Responsive tweaks */
+    @media (max-width: 500px) {
+      /*.carousel-btn { display: none; }*/
+      
+      /* Removed fixed dimensions so aspect-ratio works naturally on mobile */
+      .screenshot-track img { 
+        width: 100%; 
+        height: auto; 
+      }
+      
+      /* Slightly smaller arrows for mobile */
+      .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+      }
+      .carousel-btn.left  { left: -5px; }
+      .carousel-btn.right { right: -5px; }
+    }
+
+    /* ---------- DOWNLOAD SECTION ---------- */
+    .download {
+      text-align: center;
+    }
+
+    .download p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .download a {
+      display: inline-block;
+      margin: 8px 6px;
+      padding: 14px 32px;
+      background: var(--accent);
+      color: #020617;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .download a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(56,189,248,0.4);
+    }
+
+    .download a.secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+    }
+
+    .download a.secondary:hover {
+      background: rgba(56,189,248,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .nav-icon { height: 32px; }
+      .nav-title { height: 24px; }
+      .card { padding: 18px; }
+      .download p { font-size: 1rem; }
+      .download a { padding: 12px 24px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navbar (icon + title, closes tab on click) -->
+  <nav class="navbar-top">
+    <div class="nav-logo-link" onclick="window.close()">
+      <img src="../images/strawberryicon.png" alt="Strawberry Productions" class="nav-icon" />
+      <img src="../images/title.png" alt="Strawberry Productions" class="nav-title" />
+    </div>
+  </nav>
+
+  <!-- Scrollable wrapper -->
+  <div class="main-scroll">
+
+    <main class="container">
+
+      <!-- ========== SCREENSHOTS ========== -->
+      <section class="card">
+        <h2>Screenshots</h2>
+        <br>
+        <div class="screenshot-wrapper">
+          <button class="carousel-btn left"  onclick="scrollGallery(-1)">&#10094;</button>
+          <div class="screenshot-track" id="screenshotTrack">
+            <!-- Replace src with your actual screenshot paths -->
+            <img src="../images/Genshin_x_Craft_thumbnail.webp" alt="Screenshot 1">
+            <img src="../images/Zhongli_thumbnail.webp" alt="Screenshot 2">
+            <img src="../images/2_Star_Weapon.webp" alt="Screenshot 3">
+            <!--<img src="../images/genshin/screenshot4.png" alt="Screenshot 4"> -->
+          </div>
+          <button class="carousel-btn right" onclick="scrollGallery(1)">&#10095;</button>
+        </div>
+      </section>
+
+      <!-- ========== DOWNLOAD ========== -->
+      <section class="card download">
+        <h2>Download</h2>
+        <p>Get the latest version of the addon below:</p>
+
+        <!-- Replace href with your actual download link -->
+        <a href="https://link-hub.net/1443996/sVxp0b9LWwrD">Download Addon</a>
+
+        <br><br>
+        <a href="javascript:window.close()" class="secondary">⬅ Back to Home</a>
+      </section>
+
+    </main>
+
+  </div>
+  <!-- End main-scroll -->
+
+  <script>
+    const track = document.getElementById('screenshotTrack');
+
+    function scrollGallery(direction) {
+      // Get the exact width of one image
+      const imgWidth = track.querySelector('img')?.offsetWidth || 320;
+      
+      track.scrollBy({
+        left: direction * imgWidth, // Scroll by exactly 1 image width
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+</body>
+</html>
