@@ -1,0 +1,97 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.hunter_bow.idle_first_person": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [60, 66, -60],
+					"position": [5, 18, 5],
+					"scale": [0.8, 0.8, 0.8]
+				},
+				"arrow": {
+					"scale": [0, 0, 0]
+				},
+				"upper_string": {
+					"rotation": [0, 0, 0]
+				},
+				"lower_string": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		},
+		"animation.hunter_bow.idle_third_person": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [62.5, 0, 0],
+					"position": [0, 23, -2],
+					"scale": 0.8
+				},
+				"arrow": {
+					"scale": 0
+				},
+				"upper_string": {
+					"rotation": [0, 0, 0]
+				},
+				"lower_string": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		},
+		"animation.hunter_bow.charge_first_person": {
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "bow_flash"
+				}
+			},
+			"bones": {
+				"root_item": {
+					"rotation": [60, 66, -60],
+					"position": [0, "18+(variable.charge_amount*2)+(math.sin(query.life_time*600)*0.3*variable.charge_amount)", "0+(variable.charge_amount*3)"],
+					"scale": [1, 1, 1]
+				},
+				"arrow": {
+					"scale": [1, 1, 1],
+					"position": [0, 0, "variable.charge_amount*2"]
+				},
+				"upper_string": {
+					"rotation": ["variable.charge_amount*15", 0, 0],
+					"position": [0, 0, "variable.charge_amount*1"]
+				},
+				"lower_string": {
+					"rotation": ["variable.charge_amount*-15", 0, 0],
+					"position": [0, 0, "variable.charge_amount*1"]
+				}
+			}
+		},
+		"animation.hunter_bow.charge_third_person": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [15, 0, 0],
+					"position": [1, "24+(variable.charge_amount*2)+(math.sin(query.life_time*600)*0.3*variable.charge_amount)", "-7+(variable.charge_amount*3)"],
+					"scale": [1, 0.8, 1]
+				},
+				"arrow": {
+					"position": [0, 0, "variable.charge_amount*2"],
+					"scale": 1
+				},
+				"upper_string": {
+					"rotation": ["variable.charge_amount*15", 0, 0],
+					"position": [0, 0, "variable.charge_amount*1"]
+				},
+				"lower_string": {
+					"rotation": ["variable.charge_amount*-15", 0, 0],
+					"position": [0, 0, "variable.charge_amount*1"]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "bow_flash"
+				}
+			}
+		}
+	}
+}

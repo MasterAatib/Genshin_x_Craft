@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pillar.idle": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				}
+			}
+		},
+		"animation.shield.idle": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"body": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"spin_1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"3.9583": [0, 360, 0]
+					}
+				},
+				"spin_2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"3.9583": [0, 360, 0]
+					}
+				}
+			}
+		}
+	}
+}

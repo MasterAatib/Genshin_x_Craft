@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "gi:zhongli_trader",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/zhongli/zhongli_skin"
+      },
+      "geometry": {
+        "default": "geometry.humanoid.customSlim",
+        "slim": "geometry.humanoid.customSlim"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.helmet_layer_visible = 0.0;",
+          "variable.leg_layer_visible = 0.0;",
+          "variable.boot_layer_visible = 0.0;",
+          "variable.chest_layer_visible = 0.0;"
+        ],
+        "animate": ["idle"]
+      },
+      "animations": {
+        "idle": "animation.humanoid.idle"
+      },
+      "render_controllers": ["controller.render.zhongli_trader"],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "base_color": "#3D2B1F",
+        "overlay_color": "#C69C6D"
+      }
+    }
+  }
+}

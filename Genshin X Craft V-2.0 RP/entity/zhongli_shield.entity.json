@@ -1,0 +1,24 @@
+{
+  "format_version": "1.19.50",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "zhongli:shield",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/zhongli/geo_shield"
+      },
+      "geometry": {
+        "default": "geometry.geo_shield"
+      },
+      "animations": {
+        "idle": "animation.shield.idle"
+      },
+      "scripts": {
+        "animate": ["idle"]
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

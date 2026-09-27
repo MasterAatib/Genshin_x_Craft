@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.catalyst.float": {
+			"loop": true,
+			"animation_length": 37.25,
+			"bones": {
+				"root": {
+					"rotation": [16, "query.life_time*50", 0],
+					"position": {
+						"0.0": [0, "16+math.sin(query.life_time*100)*2", 0],
+						"35.625": [0, "20+math.sin(query.life_time*100)*2", 0],
+						"37.25": [0, 15.82, 0]
+					}
+				},
+				"book": {
+					"rotation": [-15, 0, 0]
+				}
+			}
+		}
+	}
+}

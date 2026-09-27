@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "gi:electro_1_slime",
+			"materials": {
+				"default": "slime_outer"
+			},
+			"textures":{
+				"default":"textures/entity/slimes/elemental_slime_electro_1"
+				
+			},
+			"geometry": {
+				"default": "geometry.elemental_slime"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.squish_factor = (query.previous_squish_value + (query.current_squish_value - query.previous_squish_value) * query.frame_alpha);",
+					"variable.bounce = 1 / ((variable.squish_factor / (query.variant * 0.5 + 1)) + 1);",
+					"variable.horizontal_scale_amount = variable.bounce * query.variant;",
+					"variable.vertical_scale_amount = (1 / variable.bounce) * query.variant;"
+				],
+				"scaleX": "variable.horizontal_scale_amount",
+				"scaleY": "variable.vertical_scale_amount",
+				"scaleZ": "variable.horizontal_scale_amount"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"texture": "elemental_slime_spawn_egg"
+			}
+		}
+	}
+}
